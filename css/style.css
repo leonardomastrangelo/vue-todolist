@@ -1,3 +1,4 @@
+/** GENERAL  */
 body {
     font-family: 'Nunito', sans-serif;
 }
@@ -16,11 +17,11 @@ body {
     border-radius: 40px;
 }
 
-/* header */
+/*! header */
 #logo {
     width: 150px;
 }
-/* main */
+/*! main */
 .container-fluid h2 {
     font-size: 1.5em;
 }

@@ -59,11 +59,7 @@ createApp({
         this.selectPriority = "low"
     },
     todoDone(i){
-        if (this.todoList[i].doneTask) {
-            this.todoList[i].doneTask = false
-        } else {
-            this.todoList[i].doneTask = true
-        }
+        this.todoList[i].doneTask = (this.todoList[i].doneTask) ? false : true
     },
   },
 }).mount("#app");
