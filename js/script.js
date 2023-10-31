@@ -33,7 +33,7 @@ createApp({
             },
         ],
         lastID : 3,
-        selectPriority : "",
+        selectPriority : "low",
         textTask : ""
     };
   },
@@ -56,7 +56,7 @@ createApp({
         }
         this.todoList.unshift(newTask)
         this.textTask = ""
-        this.selectPriority = ""
+        this.selectPriority = "low"
     },
     todoDone(i){
         if (this.todoList[i].doneTask) {

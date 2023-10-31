@@ -34,9 +34,11 @@ body {
 }
 .fa-solid.fa-check {
     color: rgb(28, 187, 28);
+    cursor: pointer;
 }
 .fa-solid.fa-trash {
     color: rgb(56, 53, 53);
+    cursor: pointer;
 }
 .done {
     text-decoration: line-through;
