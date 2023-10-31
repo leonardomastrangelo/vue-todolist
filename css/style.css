@@ -42,14 +42,14 @@ body {
     text-decoration: line-through;
 }
 .low {
-    background-color: green;
+    background-color: #198755;
     color: white;
 }
 .medium {
-    background-color: yellow;
+    background-color: #FFC106;
     color: black;
 }
 .high {
-    background-color: red;
+    background-color: #DC3444;
     color: white;
 }
