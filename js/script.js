@@ -57,6 +57,13 @@ createApp({
         this.todoList.unshift(newTask)
         this.textTask = ""
         this.selectPriority = ""
-    }
+    },
+    todoDone(i){
+        if (this.todoList[i].doneTask) {
+            this.todoList[i].doneTask = false
+        } else {
+            this.todoList[i].doneTask = true
+        }
+    },
   },
 }).mount("#app");

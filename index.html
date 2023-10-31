@@ -34,7 +34,7 @@
                 <section class="pb-5 d-flex flex-column align-items-center">
                     <div class="d-flex flex-column align-items-center">
                         <label class="text-uppercase fs-5" for="task">to-do:</label>
-                        <input type="text" class="form-control w-100" v-model="textTask">
+                        <input type="text" class="form-control w-100" v-model="textTask" id="task" name="task">
                     </div>
                     <select class="rounded-3 my-3" v-model="selectPriority">
                         <option selected value="low">Low</option>
@@ -86,7 +86,7 @@
                         <!-- actions -->
                         <div class="col-2 d-flex align-items-center">
                             <span class="px-2">
-                                <i class="fa-solid fa-check"></i>
+                                <i class="fa-solid fa-check" @click="todoDone(index)"></i>
                             </span>
                             <span class="px-2">
                                 <i class="fa-solid fa-trash" @click="removeTask(taskMate.id)"></i>
