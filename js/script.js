@@ -31,10 +31,14 @@ createApp({
                 text : "medium",
                 doneTask : false
             },
-        ]
+        ],
+        lastID : 3
     };
   },
   methods: {
-
+    removeTask(id){
+        const index = this.todoList.findIndex((task)=>task.id === id);
+        this.todoList.splice(index,1);
+    }
   },
 }).mount("#app");
