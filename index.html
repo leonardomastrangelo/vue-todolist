@@ -20,7 +20,7 @@
         <div id="app">
             <div class="container mt-5">
                 <!-- header -->
-                <header class="d-flex flex-column align-items-center mb-5">
+                <header class="d-flex flex-column align-items-center">
                     <!-- logo -->
                     <div id="logo">
                         <img class="my-fluid rounded-5" src="img/logo.png" alt="logo">
@@ -30,10 +30,24 @@
                     <h1 class="text-uppercase fw-bold display-4 p-4">to-do list</h1>
                 </header>
 
+                <!-- addTask -->
+                <section class="pb-5 d-flex flex-column align-items-center">
+                    <div class="d-flex flex-column align-items-center">
+                        <label class="text-uppercase fs-5" for="task">to-do:</label>
+                        <input type="text" class="form-control w-100" v-model="textTask">
+                    </div>
+                    <select class="rounded-3 my-3" v-model="selectPriority">
+                        <option selected value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                    <button class="btn btn-primary" @click="addTask">Add Task</button>
+                </section>
+
                 <!-- main -->
                 <main class="container-fluid">
                     <!-- main-header -->
-                    <div class="main-header row mb-4">
+                    <div class="main-header row text-light mb-4">
                         <div class="col-4">
                             <h2>Team Member</h2>
                         </div>
@@ -65,7 +79,7 @@
                         </div>
                         <!-- priority -->
                         <div class="col-2 d-flex align-items-center">
-                            <span :class="taskMate.priority" class="badge text-bg-success">
+                            <span :class="taskMate.priority" class="badge ">
                                 {{taskMate.text}}
                             </span>
                         </div>

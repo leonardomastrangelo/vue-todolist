@@ -32,13 +32,31 @@ createApp({
                 doneTask : false
             },
         ],
-        lastID : 3
+        lastID : 3,
+        selectPriority : "",
+        textTask : ""
     };
   },
   methods: {
     removeTask(id){
         const index = this.todoList.findIndex((task)=>task.id === id);
         this.todoList.splice(index,1);
+    },
+    addTask(){
+        this.lastID++;
+        const newTask = 
+        {
+            id : this.lastID,
+            name : "Leonardo Mastrangelo",
+            image : "img/us.png",
+            task : this.textTask,
+            priority : this.selectPriority,
+            text : this.selectPriority,
+            doneTask : false
+        }
+        this.todoList.unshift(newTask)
+        this.textTask = ""
+        this.selectPriority = ""
     }
   },
 }).mount("#app");
