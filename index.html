@@ -16,9 +16,71 @@
 </head>
 <body>
 
-    <div class="wrapper w-100 vh-100">
+    <div class="wrapper">
         <div id="app">
-        
+            <div class="container mt-5">
+                <!-- header -->
+                <header class="d-flex flex-column align-items-center mb-5">
+                    <!-- logo -->
+                    <div id="logo">
+                        <img class="my-fluid rounded-5" src="img/logo.png" alt="logo">
+                    </div>
+
+                    <!-- title -->
+                    <h1 class="text-uppercase fw-bold display-4 p-4">to-do list</h1>
+                </header>
+
+                <!-- main -->
+                <main class="container-fluid">
+                    <!-- main-header -->
+                    <div class="main-header row mb-4">
+                        <div class="col-4">
+                            <h2>Team Member</h2>
+                        </div>
+                        <div class="col-4">
+                            <h2>Task</h2>
+                        </div>
+                        <div class="col-2">
+                            <h2>Priority</h2>
+                        </div>
+                        <div class="col-2">
+                            <h2>Action</h2>
+                        </div>
+                    </div>
+
+                    <!-- main-body -->
+                    <div class="row main-body py-2" v-for="(taskMate,index) in todoList">
+                        <!-- mate -->
+                        <div class="col-4 d-flex align-items-center">
+                            <!-- picture -->
+                            <div id="mate">
+                                <img class="my-fluid rounded-circle" :src="taskMate.image" :alt="taskMate.name">
+                            </div>
+                            <!-- name -->
+                            <h3 class="ps-3">{{taskMate.name}}</h3>
+                        </div>
+                        <!-- task -->
+                        <div class="col-4 d-flex align-items-center">
+                            <h3 :class=" {'done' : taskMate.doneTask}">{{taskMate.task}}</h3>
+                        </div>
+                        <!-- priority -->
+                        <div class="col-2 d-flex align-items-center">
+                            <span :class="taskMate.priority" class="badge text-bg-success">
+                                {{taskMate.text}}
+                            </span>
+                        </div>
+                        <!-- actions -->
+                        <div class="col-2 d-flex align-items-center">
+                            <span class="px-2">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            <span class="px-2">
+                                <i class="fa-solid fa-trash"></i>
+                            </span>
+                        </div>
+                    </div>
+                </main>
+            </div>
         </div>
     </div>
     
